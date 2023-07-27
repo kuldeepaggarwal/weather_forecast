@@ -13,6 +13,7 @@ gem 'sprockets-rails', '~> 3.4.2'
 gem 'stimulus-rails', '~> 1.2.1'
 gem 'turbo-rails', '~> 1.4.0'
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+gem 'view_component', '~> 3.5.0'
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
@@ -30,6 +31,7 @@ group :development do
 end
 
 group :test do
+  gem 'capybara', '~> 3.39.2'
   gem 'simplecov', '~> 0.22.0', require: false
   gem 'webmock', '~> 3.18.1'
 end

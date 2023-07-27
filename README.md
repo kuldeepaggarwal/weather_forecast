@@ -48,3 +48,7 @@ WeatherApi.fetch_weather_report(address: 'Milton, Canada, L9T5J7')
 ## Test
 
 1. run `bundle exec rspec spec`
+
+## Technical Decisions
+
+1. ViewComponents: A framework for creating reusable, testable & encapsulated view components, built to integrate seamlessly with Ruby on Rails.
