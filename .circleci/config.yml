@@ -23,6 +23,17 @@ jobs:
       - run: bundle exec rspec spec
       - store_artifacts:
           path: coverage
+  lint:
+    docker:
+      - image: cimg/ruby:3.2.2
+    executor: ruby/default
+    steps:
+      - checkout
+      - run:
+          name: Which bundler?
+          command: bundle -v
+      - ruby/install-deps
+      - run: bundle exec rubocop
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
@@ -31,3 +42,4 @@ workflows:
     # Inside the workflow, you define the jobs you want to run.
     jobs:
       - test
+      - lint
