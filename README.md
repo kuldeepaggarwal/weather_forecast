@@ -6,6 +6,7 @@ It is a simple application to show weather for a specified address.
 
 - Ruby 3.2.2
 - Bundler gem(`gem install bundler`)
+- Set `WEATHER_API_ACCESS_ID` environment variable with [WeatherAPI](https://www.weatherapi.com/) API key
 
 ## Setup
 
@@ -27,6 +28,20 @@ bundle exec rubocop
 1. Run the server by the following command:
     `bundle exec rails s`
 2. Visit `http://localhost:3000` in the browser and play with the solution.
+
+## Playgroud via rails console
+
+We can play with weather forcast APIs by opening a rails console using the following command in the terminal.
+
+```sh
+WEATHER_API_ACCESS_ID=<api_key> bundle exec rails c
+```
+
+and then you can search the weather report with the following API interface:
+
+```rb
+WeatherApi.fetch_weather_report(address: 'Milton, Canada, L9T5J7')
+```
 
 ## Test
 
