@@ -28,3 +28,7 @@ group :development do
   gem 'listen', '~> 3.8.0'
   gem 'web-console', '~> 4.2.0'
 end
+
+group :test do
+  gem 'simplecov', '~> 0.22.0', require: false
+end
