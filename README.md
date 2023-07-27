@@ -12,6 +12,16 @@ It is a simple application to show weather for a specified address.
 1. clone the project
 2. Execute the following command in the terminal `cd weather_forcast && bundle install`
 
+## Lint
+
+We are using [Rubocop](https://github.com/rubocop/rubocop) gem to validate the style for this project.
+
+The following command will check for any linting issue:
+
+```
+bundle exec rubocop
+```
+
 ## Start the server
 
 1. Run the server by the following command:

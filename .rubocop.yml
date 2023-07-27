@@ -1,0 +1,10 @@
+AllCops:
+  TargetRubyVersion: 3.2.2
+  NewCops: enable
+
+require:
+  - rubocop-rails
+  - rubocop-rspec
+
+Style/Documentation:
+  Enabled: false
