@@ -1,6 +1,6 @@
 # Weather forecast
 
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/kuldeepaggarwal/weather_forecast/tree/main.svg?style=svg&circle-token=eb7bbd9a7e13f039ecccc4a51579584b3d16a159)](https://dl.circleci.com/status-badge/redirect/gh/kuldeepaggarwal/weather_forecast/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/kuldeepaggarwal/weather_forecast/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/kuldeepaggarwal/weather_forecast/tree/main)
 
 It is a simple application to show weather for a specified address.
 
