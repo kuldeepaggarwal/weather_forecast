@@ -6,7 +6,8 @@ It is a simple application to show weather for a specified address.
 
 ## Demo
 
-https://github.com/kuldeepaggarwal/weather_forecast/assets/1930730/9e9766a5-9ff1-47ff-aa94-1e1f41cfc6fd
+https://github.com/kuldeepaggarwal/weather_forecast/assets/1930730/d933ceab-976d-47a4-b793-b79fb1df9197
+
 
 ## Requirements:
 
@@ -17,7 +18,7 @@ https://github.com/kuldeepaggarwal/weather_forecast/assets/1930730/9e9766a5-9ff1
 ## Setup
 
 1. clone the project
-2. Execute the following command in the terminal `cd weather_forcast && bundle install`
+2. Execute the following command in the terminal `cd weather_forcast && ./bin/setup`
 
 ## Lint
 
