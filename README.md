@@ -52,3 +52,5 @@ WeatherApi.fetch_weather_report(address: 'Milton, Canada, L9T5J7')
 ## Technical Decisions
 
 1. ViewComponents: A framework for creating reusable, testable & encapsulated view components, built to integrate seamlessly with Ruby on Rails.
+
+2. Formatters: These are the response massagers that convert raw response from a very specific API to our business logic objects. This is very helpful if we change the API client or use any other weather API anywhere in the application, then we just need to add more formatters in the `app/formatters` folder.
