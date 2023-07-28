@@ -3,12 +3,13 @@
 class WeatherComponent < ViewComponent::Base
   SUPPORTED_WEATHER_UNITS = %i[celcius farenheit].freeze
 
-  def initialize(report:, preference_unit: :celcius)
+  def initialize(report:, preference_unit: :celcius, cached: false)
     super()
     raise 'Preference unit can either be :celcius or :farenheit' if SUPPORTED_WEATHER_UNITS.exclude?(preference_unit)
 
     @preference_unit = preference_unit
     @report = report
+    @cached = cached
   end
 
   def current_temperature

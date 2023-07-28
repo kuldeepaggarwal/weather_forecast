@@ -23,4 +23,10 @@ RSpec.describe WeatherComponent, type: :component do
 
     expect(page).to have_content("Today's weather is 122.1 °F.")
   end
+
+  it 'indicates the information if it was cached' do
+    render_inline(described_class.new(report:, cached: true))
+
+    expect(page).to have_content("Today's weather is 12 °C.(cached)")
+  end
 end

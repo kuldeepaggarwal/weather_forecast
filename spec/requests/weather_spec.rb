@@ -32,15 +32,19 @@ RSpec.describe 'Display of Weather', type: :feature do
 
   it 'shows current weather for a specified location' do
     VCR.use_cassette('berlin_germany_weather') do
-      visit root_path
-
-      fill_in :address_city, with: 'Berlin'
-      fill_in :address_country, with: 'Germany'
-      fill_in :address_zip_code, with: '13129'
-      click_on 'Show Weather'
+      show_berlin_weather
 
       expect(page.body).to include("Today's weather is 18.0 °C.")
     end
+  end
+
+  it 'shows current weather for a specified location from cache', enable_cache: true do
+    VCR.use_cassette('berlin_germany_weather') do
+      show_berlin_weather # this will generate the cache
+    end
+
+    show_berlin_weather
+    expect(page.body).to include("Today's weather is 18.0 °C.(cached)")
   end
 
   it 'shows not weather report message when location is not seleceted' do
@@ -61,5 +65,16 @@ RSpec.describe 'Display of Weather', type: :feature do
 
       expect(page.body).to include('No weather report found for the location!')
     end
+  end
+
+  private
+
+  def show_berlin_weather
+    visit root_path
+
+    fill_in :address_city, with: 'Berlin'
+    fill_in :address_country, with: 'Germany'
+    fill_in :address_zip_code, with: '13129'
+    click_on 'Show Weather'
   end
 end
