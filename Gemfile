@@ -32,6 +32,8 @@ end
 
 group :test do
   gem 'capybara', '~> 3.39.2'
+  gem 'climate_control'
   gem 'simplecov', '~> 0.22.0', require: false
+  gem 'vcr'
   gem 'webmock', '~> 3.18.1'
 end

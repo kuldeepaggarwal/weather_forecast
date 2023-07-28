@@ -1,0 +1,10 @@
+<%= form_tag weather_search_path do %>
+  <% address_params = params[:address] || {} %>
+  <%= text_field_tag 'address[city]', address_params[:city], placeholder: 'City' %>
+  <%= text_field_tag 'address[state]', address_params[:state], placeholder: 'State' %>
+  <%= text_field_tag 'address[country]', address_params[:country], placeholder: 'Country' %>
+  <%= text_field_tag 'address[zip_code]', address_params[:zip_code], placeholder: 'Zipcode' %>
+  <%= submit_tag 'Show Weather' %>
+<% end %>
+
+<%= turbo_frame_tag 'weather-report' %>

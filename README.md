@@ -4,6 +4,10 @@
 
 It is a simple application to show weather for a specified address.
 
+## Demo
+
+https://github.com/kuldeepaggarwal/weather_forecast/assets/1930730/9e9766a5-9ff1-47ff-aa94-1e1f41cfc6fd
+
 ## Requirements:
 
 - Ruby 3.2.2
@@ -28,7 +32,7 @@ bundle exec rubocop
 ## Start the server
 
 1. Run the server by the following command:
-    `bundle exec rails s`
+    `WEATHER_API_ACCESS_ID=<api_key> bundle exec rails s`
 2. Visit `http://localhost:3000` in the browser and play with the solution.
 
 ## Playgroud via rails console

@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.weatherapi.com/v1/forecast.json?days=1&key=some%20fake%20key%20value&q=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      User-Agent:
+      - Ruby
+      Host:
+      - api.weatherapi.com
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Date:
+      - Fri, 28 Jul 2023 19:50:29 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Server:
+      - BunnyCDN-IL1-941
+      Cdn-Pullzone:
+      - '93447'
+      Cdn-Uid:
+      - 8fa3a04a-75d9-4707-8056-b7b33c8ac7fe
+      Cdn-Requestcountrycode:
+      - CA
+      Cache-Control:
+      - public, max-age=5
+      Cdn-Proxyver:
+      - '1.04'
+      Cdn-Requestpullsuccess:
+      - 'True'
+      Cdn-Requestpullcode:
+      - '403'
+      Cdn-Cachedat:
+      - 07/28/2023 19:50:29
+      Cdn-Edgestorageid:
+      - '1029'
+      Cdn-Status:
+      - '403'
+      Cdn-Requestid:
+      - f65b55de978486f26d25cb7538123efd
+      Cdn-Cache:
+      - EXPIRED
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error":{"code":2008,"message":"API key has been disabled."}}'
+  recorded_at: Fri, 28 Jul 2023 19:50:29 GMT
+recorded_with: VCR 6.2.0
