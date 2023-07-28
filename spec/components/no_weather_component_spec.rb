@@ -3,13 +3,9 @@
 require 'rails_helper'
 
 RSpec.describe NoWeatherComponent, type: :component do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it 'renders content when weather report is not found for a given location' do
+    render_inline(described_class.new)
 
-  # it "renders something useful" do
-  #   expect(
-  #     render_inline(described_class.new(attr: "value")) { "Hello, components!" }.css("p").to_html
-  #   ).to include(
-  #     "Hello, components!"
-  #   )
-  # end
+    expect(page).to have_content('No weather report found for the location!')
+  end
 end
