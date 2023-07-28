@@ -60,7 +60,7 @@ RSpec.describe WeatherApi::Clients::WeatherApiClient, type: :weather_api_client 
     it 'raises an error' do
       expect do
         api_client.fetch_weather_report(address: 'Milton, Canada, L9T5J7')
-      end.to raise_error(described_class::InvalidApiKeyError,
+      end.to raise_error(WeatherApi::InvalidApiKeyError,
                          'API key is incorrect, please verify the key has permission to access the API')
     end
   end

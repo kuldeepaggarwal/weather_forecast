@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative 'weather_api/errors'
+
 module WeatherApi
   # This is the public interface to fetch Weather report from any weather report provider.
   #

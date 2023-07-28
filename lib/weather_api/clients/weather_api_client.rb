@@ -10,9 +10,6 @@ module WeatherApi
     class WeatherApiClient
       BASE_URL = 'https://api.weatherapi.com/v1/forecast.json'
 
-      class Errors < StandardError; end
-      class InvalidApiKeyError < Errors; end
-
       def initialize(
         api_key: ENV.fetch('WEATHER_API_ACCESS_ID', nil),
         base_url: BASE_URL,
@@ -38,7 +35,8 @@ module WeatherApi
         response = @http_client.get(URI(@base_url), query_params)
 
         if response.unauthorized?
-          raise InvalidApiKeyError, 'API key is incorrect, please verify the key has permission to access the API'
+          raise WeatherApi::InvalidApiKeyError,
+                'API key is incorrect, please verify the key has permission to access the API'
         end
 
         response
