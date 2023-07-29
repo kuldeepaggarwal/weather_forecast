@@ -6,7 +6,7 @@ It is a simple application to show weather for a specified address.
 
 ## Demo
 
-https://github.com/kuldeepaggarwal/weather_forecast/assets/1930730/d933ceab-976d-47a4-b793-b79fb1df9197
+https://github.com/kuldeepaggarwal/weather_forecast/assets/1930730/ad44a3e3-d009-4a72-9960-be46623b5a18
 
 
 ## Requirements:
